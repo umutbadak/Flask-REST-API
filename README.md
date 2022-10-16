@@ -1,2 +1,2 @@
-# Flask REST API
- Simple CRUD REST API Wİth Flask 
+# RESTful API With CRUD
+ A simple Rest API For CRUD Operations 
