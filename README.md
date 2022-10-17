@@ -133,7 +133,7 @@ GET /listings/:id
 
 **Status Codes** 
 
-Success : 200
+Success : 200 <br>
 Error (Listing does not exist) : 404
 
 #### 4- Update Listing 
@@ -162,7 +162,7 @@ Name|Type|Required
 
 **Status Codes** 
 
-Success : 200
+Success : 200 <br>
 Not found: 404
 
 #### 5- Delete Listing 
@@ -184,6 +184,6 @@ DELETE /listings/:id
 
 **Status Codes** 
 
-Success : 200
+Success : 200 <br>
 Error (Listing does not exist) : 404
 
