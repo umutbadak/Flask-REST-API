@@ -26,11 +26,11 @@ $ source .venv/bin/activate
 $ pip install -r requirements.txt
 ``` 
 ## Running The Application
-* Create database script
+* Create database 
 ```
 $ python init_db.py
 ``` 
-* Populate database script
+* Populate database 
 ```
 $ python populate_db.py
 ``` 
@@ -38,13 +38,15 @@ $ python populate_db.py
 ```
 $ python app.py
 ```
-Application will run on following URL http://127.0.0.1:5000/api/v1
+Application will run on following URL: <br>
+http://127.0.0.1:5000/api/v1
 
 * Testing app
 ```
 $ python -m unittest -v test.py
 ```
-Note that running test script will delete database tables. After running test script,  run init_db.py again to re-create database tables.
+Note that running test script will delete database tables. 
+After running test script,  run init_db.py to re-create database tables.
 
 ## API Documentation
 
@@ -66,7 +68,7 @@ Name|Type|Required
 ```
 {
     "address": "125 Parkway Dr", 
-    "price":"422000"
+    "price":422000
 }
 ```
 
@@ -74,8 +76,9 @@ Name|Type|Required
 
 ```
 {
+    "id" : 1
     "address": "125 Parkway Dr", 
-    "price":"422000"
+    "price":422000
 }
 ```
 
@@ -83,7 +86,7 @@ Name|Type|Required
 
 Success : 201 
 
-#### 2- Listings
+#### 2- List All Listings
 
 **Request**
 ```
@@ -147,8 +150,7 @@ Name|Type|Required
 `address`|`string`|`True`
 `price`|`integer`|`True`
 
-
-** Response **
+**Response**
 
 ```
     {
@@ -158,7 +160,7 @@ Name|Type|Required
     }
 ```
 
-** Status Codes** 
+**Status Codes** 
 
 Success : 200
 Not found: 404
@@ -170,7 +172,7 @@ Not found: 404
 DELETE /listings/:id
 ```
 
-** Response **
+**Response**
 
 ```
     {
@@ -180,7 +182,7 @@ DELETE /listings/:id
     }
 ```
 
-** Status Codes** 
+**Status Codes** 
 
 Success : 200
 Error (Listing does not exist) : 404
