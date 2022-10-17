@@ -48,31 +48,7 @@ Note that running test script will delete database tables. After running test sc
 
 ## API Documentation
 
-#### 1- Create Listing
-Creates a single listing and returns created listing with id.
-* ##### URL #####
-    /listings
-* ##### Method ##### 
-    ```POST```
-* ##### URL Params ##### 
-    None
-* ##### Data Params ##### 
-    ```
-    address = [string]
-    price = [integer]
-    ```
-**Parameters**
-
-Name|Type|Description|Required
-:-:|:-:|:-:|:-:
-`name`|`string`|category name|`True`
-`short_desc`|`string`|category short description|`False`
-
-* ##### Method ##### 
-* ##### Method #####     
-* Url Params
--
-* Data Params
+#### 1- Create A Listing
 
 **Request**
 ```
@@ -80,16 +56,132 @@ POST /listings
 ```
 **Parameters**
 
-| Name          | Type          | Required  |
-| ------------- | ------------- | --------- |
-| address       | string        | True      |
-| price         | integer       | True      |
+Name|Type|Required
+:-:|:-:|:-:
+`address`|`string`|`True`
+`price`|`integer`|`True`
+
 
 ** Request Body **
 ```
 {
-    "address": "address1", 
-    "price":"122"
+    "address": "125 Parkway Dr", 
+    "price":"422000"
 }
 ```
+
 ** Response **
+
+```
+{
+    "address": "125 Parkway Dr", 
+    "price":"422000"
+}
+```
+
+** Status Codes** 
+
+Success : 201 
+
+#### 2- Listings
+
+**Request**
+```
+GET /listings
+```
+
+** Response **
+
+```
+[
+    {
+        "id": 1,
+        "address": "301 Mullholand Dr.",
+        "price": 356000
+    },
+    {
+        "id": 2,
+        "address": "10 Park Av.",
+        "price": 430000
+    }
+]
+```
+
+** Status Codes** 
+
+Success : 200
+ 
+#### 3- Listing Detail 
+
+**Request**
+```
+GET /listings/:id
+```
+
+** Response **
+
+```
+    {
+        "id": 2,
+        "address": "10 Park Av.",
+        "price": 430000
+    }
+```
+
+** Status Codes** 
+
+Success : 200
+Error (Listing does not exist) : 404
+
+#### 4- Update Listing 
+
+**Request**
+```
+PUT /listings/:id
+```
+
+**Parameters**
+
+Name|Type|Required
+:-:|:-:|:-:
+`address`|`string`|`True`
+`price`|`integer`|`True`
+
+
+** Response **
+
+```
+    {
+        "id": 2,
+        "address": "10 Park Av.",
+        "price": 430000
+    }
+```
+
+** Status Codes** 
+
+Success : 200
+Not found: 404
+
+#### 5- Delete Listing 
+
+**Request**
+```
+DELETE /listings/:id
+```
+
+** Response **
+
+```
+    {
+        "id": 2,
+        "address": "10 Park Av.",
+        "price": 430000
+    }
+```
+
+** Status Codes** 
+
+Success : 200
+Error (Listing does not exist) : 404
+
