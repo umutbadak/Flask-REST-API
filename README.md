@@ -50,7 +50,7 @@ After running test script,  run init_db.py to re-create database tables.
 
 ## API Documentation
 
-#### 1- Create A Listing
+### 1- Create A Listing
 
 **Request**
 ```
@@ -86,7 +86,7 @@ Name|Type|Required
 
 Success : 201 
 
-#### 2- List All Listings
+### 2- List All Listings
 
 **Request**
 ```
@@ -114,7 +114,7 @@ GET /listings
 
 Success : 200
  
-#### 3- Listing Detail 
+### 3- Listing Detail 
 
 **Request**
 ```
@@ -136,7 +136,7 @@ GET /listings/:id
 Success : 200 <br>
 Error (Listing does not exist) : 404
 
-#### 4- Update Listing 
+### 4- Update Listing 
 
 **Request**
 ```
@@ -165,7 +165,7 @@ Name|Type|Required
 Success : 200 <br>
 Not found: 404
 
-#### 5- Delete Listing 
+### 5- Delete Listing 
 
 **Request**
 ```
