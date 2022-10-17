@@ -64,7 +64,7 @@ Name|Type|Required
 `price`|`integer`|`True`
 
 
-** Request Body **
+**Request Body**
 ```
 {
     "address": "125 Parkway Dr", 
@@ -72,7 +72,7 @@ Name|Type|Required
 }
 ```
 
-** Response **
+**Response**
 
 ```
 {
@@ -82,7 +82,7 @@ Name|Type|Required
 }
 ```
 
-** Status Codes** 
+**Status Codes** 
 
 Success : 201 
 
@@ -93,7 +93,7 @@ Success : 201
 GET /listings
 ```
 
-** Response **
+**Response**
 
 ```
 [
@@ -110,7 +110,7 @@ GET /listings
 ]
 ```
 
-** Status Codes** 
+**Status Codes** 
 
 Success : 200
  
@@ -121,7 +121,7 @@ Success : 200
 GET /listings/:id
 ```
 
-** Response **
+**Response**
 
 ```
     {
@@ -131,7 +131,7 @@ GET /listings/:id
     }
 ```
 
-** Status Codes** 
+**Status Codes** 
 
 Success : 200
 Error (Listing does not exist) : 404
